@@ -53,6 +53,8 @@ app.use(express.urlencoded({extended: true}));
 	console.log(req.body.email);
 	console.log(req.body.role);
 	console.log(req.body.password);
+
+  console.log(user.password);
 	user.save((err,userInfo)=>{
 		if(err) return res.json({success : false, err})
 			return res.status(200).json({
