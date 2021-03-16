@@ -36,6 +36,7 @@ const userSchema = mongoose.Schema({
 userSchema.pre('save',function(next){
 	var user = this;
 	
+	//password가 변경될 경우에만 실행
 	if(user.isModified('password')){
 		//비밀번호 암호화
 		//salt 를 선언하여 salt를 사용하여 암호화
