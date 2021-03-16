@@ -1,0 +1,32 @@
+<h1>간단한 입력폼</h1>
+
+<form id="form1" method="POST" action="/register">
+    <input type="text" name="name" placeholder="이름">
+    <input type="text" name="email" placeholder="이메일">
+    <input type="text" name="role" placeholder="권한">
+    <input type="password" name="password" placeholder="비밀번호">
+    <button id="btn1">submit</button>
+</form>
+<script>
+
+btn1.onclick = function (e) {
+        var formData = $("#form1").serialize();
+        $.ajax({
+            url: "/register",
+            type: 'POST',
+            data: formData,
+            dataType : json,
+            async : false,
+            success: function (data) {
+                alert(data);
+            },
+            error: function (xhr, status) {
+                alert(xhr + " : " + status);
+            }
+        });
+        return false;
+    }
+
+
+
+</script>
