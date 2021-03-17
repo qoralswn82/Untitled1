@@ -1,6 +1,6 @@
 <h1>간단한 입력폼</h1>
 
-<form id="form1" method="POST" action="/register">
+<form id="form1" method="POST" action="/">
     <input type="text" name="name" placeholder="이름">
     <input type="text" name="email" placeholder="이메일">
     <input type="text" name="role" placeholder="권한">
@@ -12,7 +12,7 @@
 btn1.onclick = function (e) {
         var formData = $("#form1").serialize();
         $.ajax({
-            url: "/register",
+            url: "/login",
             type: 'POST',
             data: formData,
             dataType : json,
