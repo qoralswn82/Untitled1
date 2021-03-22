@@ -47,6 +47,10 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 
+	app.get('/api/test',(req,res)=>{
+		res.send("안녕~ 응답했다~")
+	})
+
 
 	app.post('api/users/register',(req,res)=>{
 	
