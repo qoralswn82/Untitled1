@@ -8,7 +8,7 @@ const app = express();
 const { User } = require("./models/user");
 var router = require('./router/main')(app);
 
-const port = 3000
+const port = 5000
 
 const mongoose = require('mongoose')
 mongoose.connect(config.mongoURI,{

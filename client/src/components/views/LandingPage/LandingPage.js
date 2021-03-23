@@ -5,6 +5,9 @@ function LandingPage() {
     useEffect(()=>{
         axios.get('/api/test')
         .then(response => console.log("응답 메시지 : "+ response.data))
+        .catch(error =>{
+            console.log("error")
+        })
     }, [])
     
     
